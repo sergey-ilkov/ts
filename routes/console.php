@@ -14,5 +14,5 @@ Artisan::command('inspire', function () {
 Schedule::command('delete-secret:cron')->daily();
 
 // ? Reload app keys
-Schedule::command('reload-keys:cron')->everyFiveMinutes();
+Schedule::command('reload-keys:cron')->everyMinute();
 // Schedule::command('reload-keys:cron')->monthly();

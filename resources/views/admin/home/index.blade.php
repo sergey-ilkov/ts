@@ -61,7 +61,7 @@
                     </div>               
                     <div class="dashboard-box__item">
                         <span class="dashboard-box__item-text">{{ __('all total:') }}</span>
-                        <span class="dashboard-box__item-num">{{ $info['secrets']['all_total'] }}</span>
+                        {{-- <span class="dashboard-box__item-num">{{ $info['secrets']['all_total'] }}</span> --}}
                     </div>               
                 </div>
             </div>

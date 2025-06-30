@@ -6,6 +6,7 @@ use App\Models\Plan;
 use App\Models\User;
 use App\Models\Secret;
 use App\Models\Account;
+use App\Models\Product;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
@@ -13,8 +14,8 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Crypt;
 use function Laravel\Prompts\password;
 use Illuminate\Support\Facades\Artisan;
-use Illuminate\Support\Facades\Validator;
 
+use Illuminate\Support\Facades\Validator;
 use App\Services\Backend\SecretBackendService;
 use App\Services\Backend\AccountBackendService;
 
@@ -34,9 +35,18 @@ class TestController extends Controller
     {
 
 
+        $product = $this->accountService->getProduct(1);
+        foreach ($product->lifespans as $lifespan) {
+
+            $secret_ttl = $lifespan->ttl;
+
+            dump(gettype($secret_ttl), $secret_ttl);
+        }
+
         // User::create(['email' => 'rrr']);
 
-        dump(request());
+        // dump($secret_ttl);
+        // dump(request());
         // dump(request()->header('Referer'));
 
         return;

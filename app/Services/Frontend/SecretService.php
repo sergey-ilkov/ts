@@ -73,7 +73,7 @@ class SecretService
         if ($product->lifespans->isNotEmpty()) {
             foreach ($product->lifespans as $lifespan) {
                 if ($request->secret['ttl'] == $lifespan->ttl) {
-                    $secret_ttl = $lifespan->ttl;
+                    $secret_ttl = (int) $lifespan->ttl;
                 }
             }
         }
@@ -115,6 +115,7 @@ class SecretService
         $secret_url = url("/secret/{$secret_key}");
 
         $created = Carbon::now();
+        dump(gettype($secret_ttl));
         $deleted = Carbon::now()->addSecond($secret_ttl);
 
         // ? create secret

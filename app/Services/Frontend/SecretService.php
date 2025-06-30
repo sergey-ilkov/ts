@@ -62,10 +62,10 @@ class SecretService
 
             return response()->json($error);
         }
-        $request->validate([
-            'secret.text' => "required|string|between:1,$product->symbol",
-            'secret.ttl' => "required|integer",
-        ]);
+        // $request->validate([
+        //     'secret.text' => "required|string|between:1,$product->symbol",
+        //     'secret.ttl' => "required|integer",
+        // ]);
 
 
         $secret_ttl = null;
@@ -73,7 +73,7 @@ class SecretService
         if ($product->lifespans->isNotEmpty()) {
             foreach ($product->lifespans as $lifespan) {
                 if ($request->secret['ttl'] == $lifespan->ttl) {
-                    $secret_ttl = (int) $lifespan->ttl;
+                    $secret_ttl = $lifespan->ttl;
                 }
             }
         }

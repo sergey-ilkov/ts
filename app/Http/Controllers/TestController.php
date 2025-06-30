@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Crypt;
 use function Laravel\Prompts\password;
 use Illuminate\Support\Facades\Artisan;
 
+use App\Services\Frontend\SecretService;
 use App\Services\Frontend\AccountService;
 use Illuminate\Support\Facades\Validator;
 use App\Services\Backend\SecretBackendService;
@@ -25,27 +26,31 @@ class TestController extends Controller
     //
     protected $accountBackendService;
     protected $secretBackendService;
-    protected $accountService;
+    public $secretService;
 
-    public function __construct(AccountBackendService $accountBackendService, SecretBackendService $secretBackendService, AccountService $accountService)
+    public function __construct(AccountBackendService $accountBackendService, SecretBackendService $secretBackendService, SecretService $secretService)
     {
         // 
         $this->accountBackendService = $accountBackendService;
         $this->secretBackendService = $secretBackendService;
-        $this->accountService = $accountService;
+        $this->secretService = $secretService;
     }
-    public function index()
+    public function index(Request $request)
     {
 
+        $req = (object) [
+            'secret' => [
+                'text' => 'text secret',
+                'ttl' => '300',
+            ]
+        ];
+        // dump(gettype($request), gettype($req));
+        // return;
 
-        $product = $this->accountService->getProduct(1);
-        foreach ($product->lifespans as $lifespan) {
 
-            $secret_ttl = (int) $lifespan->ttl;
+        $secret = $this->secretService->createSecret($req);
 
-            dump(gettype($secret_ttl), $secret_ttl);
-        }
-
+        dump($secret);
         // User::create(['email' => 'rrr']);
 
         // dump($secret_ttl);

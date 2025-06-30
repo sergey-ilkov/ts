@@ -73,7 +73,7 @@ class SecretService
         if ($product->lifespans->isNotEmpty()) {
             foreach ($product->lifespans as $lifespan) {
                 if ($request->secret['ttl'] == $lifespan->ttl) {
-                    $secret_ttl = $lifespan->ttl;
+                    $secret_ttl = (int) $lifespan->ttl;
                 }
             }
         }

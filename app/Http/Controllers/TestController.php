@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Crypt;
 use function Laravel\Prompts\password;
 use Illuminate\Support\Facades\Artisan;
 
+use App\Services\Frontend\AccountService;
 use Illuminate\Support\Facades\Validator;
 use App\Services\Backend\SecretBackendService;
 use App\Services\Backend\AccountBackendService;
@@ -24,12 +25,14 @@ class TestController extends Controller
     //
     protected $accountBackendService;
     protected $secretBackendService;
+    protected $accountService;
 
-    public function __construct(AccountBackendService $accountBackendService, SecretBackendService $secretBackendService)
+    public function __construct(AccountBackendService $accountBackendService, SecretBackendService $secretBackendService, AccountService $accountService)
     {
         // 
         $this->accountBackendService = $accountBackendService;
         $this->secretBackendService = $secretBackendService;
+        $this->accountService = $accountService;
     }
     public function index()
     {

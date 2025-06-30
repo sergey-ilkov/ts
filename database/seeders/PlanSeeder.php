@@ -45,33 +45,33 @@ class PlanSeeder extends Seeder
         ]);
         $product->plans()->save($plan);
 
-        // $product = Product::find(3);
-        // $plan = new Plan([
-        //     'name' => 'Premium',
-        //     'slug' => 'premium-month',
-        //     'is_active' => true,
-        //     'price' => 0,
-        //     'currency' => 'грн',
-        //     'trial_period' => 14,
-        //     'trial_interval' => 'day',
-        //     'paid_period' => 1,
-        //     'paid_interval' => 'month',
-        //     'sort_order' => 3,
-        // ]);
-        // $product->plans()->save($plan);
+        $product = Product::find(3);
+        $plan = new Plan([
+            'name' => 'Premium',
+            'slug' => 'premium-month',
+            'is_active' => true,
+            'price' => 0,
+            'currency' => 'грн',
+            'trial_period' => 14,
+            'trial_interval' => 'day',
+            'paid_period' => 1,
+            'paid_interval' => 'month',
+            'sort_order' => 3,
+        ]);
+        $product->plans()->save($plan);
 
-        // $plan = new Plan([
-        //     'name' => 'Premium',
-        //     'slug' => 'premium-year',
-        //     'is_active' => true,
-        //     'price' => 0,
-        //     'currency' => 'грн',
-        //     'trial_period' => 14,
-        //     'trial_interval' => 'day',
-        //     'paid_period' => 12,
-        //     'paid_interval' => 'month',
-        //     'sort_order' => 3,
-        // ]);
-        // $product->plans()->save($plan);
+        $plan = new Plan([
+            'name' => 'Premium',
+            'slug' => 'premium-year',
+            'is_active' => true,
+            'price' => 0,
+            'currency' => 'грн',
+            'trial_period' => 14,
+            'trial_interval' => 'day',
+            'paid_period' => 12,
+            'paid_interval' => 'month',
+            'sort_order' => 3,
+        ]);
+        $product->plans()->save($plan);
     }
 }

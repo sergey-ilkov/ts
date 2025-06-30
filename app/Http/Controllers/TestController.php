@@ -41,7 +41,7 @@ class TestController extends Controller
         $product = $this->accountService->getProduct(1);
         foreach ($product->lifespans as $lifespan) {
 
-            $secret_ttl = $lifespan->ttl;
+            $secret_ttl = (int) $lifespan->ttl;
 
             dump(gettype($secret_ttl), $secret_ttl);
         }

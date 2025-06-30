@@ -37,12 +37,12 @@ class TestController extends Controller
     }
     public function index(Request $request)
     {
-        $user = User::find(1);
-        $plan = Plan::find(3);
+        // $user = User::find(1);
+        // $plan = Plan::find(3);
 
-        $this->accountBackendService->setPremiumAccount($user, $plan);
+        // $this->accountBackendService->setPremiumAccount($user, $plan);
 
-        return;
+        // return;
         // $req = (object) [
         //     'secret' => [
         //         'text' => 'text secret',

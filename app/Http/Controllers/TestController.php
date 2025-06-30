@@ -38,26 +38,26 @@ class TestController extends Controller
     public function index(Request $request)
     {
 
-        $req = (object) [
-            'secret' => [
-                'text' => 'text secret',
-                'ttl' => '300',
-            ]
-        ];
+        // $req = (object) [
+        //     'secret' => [
+        //         'text' => 'text secret',
+        //         'ttl' => '300',
+        //     ]
+        // ];
         // dump(gettype($request), gettype($req));
         // return;
 
 
-        $secret = $this->secretService->createSecret($req);
+        // $secret = $this->secretService->createSecret($req);
 
-        dump($secret);
+        // dump($secret);
         // User::create(['email' => 'rrr']);
 
         // dump($secret_ttl);
         // dump(request());
         // dump(request()->header('Referer'));
 
-        return;
+        // return;
 
 
 

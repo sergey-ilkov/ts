@@ -62,10 +62,10 @@ class SecretService
 
             return response()->json($error);
         }
-        // $request->validate([
-        //     'secret.text' => "required|string|between:1,$product->symbol",
-        //     'secret.ttl' => "required|integer",
-        // ]);
+        $request->validate([
+            'secret.text' => "required|string|between:1,$product->symbol",
+            'secret.ttl' => "required|integer",
+        ]);
 
 
         $secret_ttl = null;
@@ -115,7 +115,6 @@ class SecretService
         $secret_url = url("/secret/{$secret_key}");
 
         $created = Carbon::now();
-        dump(gettype($secret_ttl));
         $deleted = Carbon::now()->addSecond($secret_ttl);
 
         // ? create secret

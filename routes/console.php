@@ -10,8 +10,8 @@ Artisan::command('inspire', function () {
 
 
 // ? Delete a secrets that has expired
-// Schedule::command('delete-secret:cron')->everyMinute();
-Schedule::command('delete-secret:cron')->daily();
+Schedule::command('delete-secret:cron')->everyMinute();
+// Schedule::command('delete-secret:cron')->daily();
 
 // ? Reload app keys
 Schedule::command('reload-keys:cron')->everyMinute();

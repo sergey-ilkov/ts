@@ -366,7 +366,7 @@ body.fixed {
 }
 
 .hero__inner {
-    min-height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100);
     padding-top: 20vh;
     display: flex;
     flex-direction: column;
@@ -446,6 +446,7 @@ body.fixed {
         opacity: 1;
     }
 }
+
 .hero-content {
     user-select: none;
     margin-bottom: 60px;
@@ -887,6 +888,12 @@ body.fixed {
     }
     .header__inner {
         gap: 20px;
+    }
+    .header {
+        padding: 15px 0;
+    }
+    .hero__logo {
+        width: 30px;
     }
 }
 

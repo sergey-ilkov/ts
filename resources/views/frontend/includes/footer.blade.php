@@ -1,7 +1,7 @@
 <footer class="footer">
     <div class="container">
         <div class="footer-top">
-            <img width="100" height="40" class="footer-logo" src="{{ asset('images/logo-footer.svg') }}" alt="Логотип тимчасовий секрет">
+            <img width="100" height="40" class="footer-logo" src="{{ asset('images/logo.svg') }}" alt="Логотип тимчасовий секрет">
             <ul class="footer-top-menu">
                 <li class="footer-top-menu__item">
                     <a class="footer__link link" href="{{ route('about') }}">Про сервіс</a>

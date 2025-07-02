@@ -19,8 +19,8 @@
 
 <meta name="application-name" content="{{ __('seo.' . $page . '.title') }}">
 
-<link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
 <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
+<link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
 <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-icon-180x180.png') }}">
 
 {{-- <link rel="manifest" href="{{ asset('manifest.json') }}"> --}}

@@ -1,3 +1,10 @@
+function setVH() {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+setVH();
+window.addEventListener('resize', setVH);
+
 const wrapper = document.querySelector('.wrapper');
 const body = document.querySelector('body');
 const header = document.querySelector('.header');
@@ -139,13 +146,13 @@ class SvgMagicGrd {
     }
 
     setStyle() {
-        this.maskSize = Math.ceil(this.coordsBox.height / 2.5);
+        // this.maskSize = Math.ceil(this.coordsBox.height / 2.5);
+        this.maskSize = 80;
         this.maskPos = Math.ceil(this.maskSize / 2);
 
+        this.getColor();
         this.mask1.style.width = `${this.maskSize}px`;
         this.mask1.style.height = `${this.maskSize}px`;
-
-        this.getColor();
         this.mask1.style.background = `${this.color}`;
         this.mask1.style.transition = `transform 0.1s ease, background-color 0.1s linear`;
 

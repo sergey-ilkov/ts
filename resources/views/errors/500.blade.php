@@ -6,8 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>500 Внутрішня помилка сервера</title>
 
-    <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
+    <meta name="theme-color" content="#171717">
+    
     <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
+    <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-icon-180x180.png') }}">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +17,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
 
-     <link rel="stylesheet" href="{{ asset('css/error-page.css') . '?v=' . rand(10, 1000) }}">
+    <link rel="stylesheet" href="{{ asset('css/error-page.css') . '?v=' . rand(10, 1000) }}">
+    
+    <script src="{{ asset('js/error-page.js') . '?v=' . rand(10, 1000) }}" defer></script>
+    
 </head>
 <body>
     <div class="wrapper page-error">

@@ -3,10 +3,10 @@
         <div class="header__inner">
             @if (Route::is("home"))
                 
-            <img width="30" height="30" class="hero__logo" src="{{ asset('images/logo-min.svg') }}" alt="Логотип тимчасовий секрет">
+            <img width="32" height="32" class="hero__logo" src="{{ asset('images/logo-min.svg') }}" alt="Логотип тимчасовий секрет">
             @else
             <a href="{{ route('home') }}">            
-                <img width="30" height="30" class="hero__logo" src="{{ asset('images/logo-min.svg') }}" alt="Логотип тимчасовий секрет">
+                <img width="32" height="32" class="hero__logo" src="{{ asset('images/logo-min.svg') }}" alt="Логотип тимчасовий секрет">
             </a>                
             @endif
 

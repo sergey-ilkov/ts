@@ -56,13 +56,13 @@
                 <h4 class="dashboard__item-title">{{ __('secrets') }}</h4>
                 <div class="dashboard-box">
                     <div class="dashboard-box__item">
-                        <span class="dashboard-box__item-text">{{ __('current total:') }}</span>
-                        <span class="dashboard-box__item-num">{{ $info['secrets']['current_total'] }}</span>
+                        <span class="dashboard-box__item-text">{{ __('total:') }}</span>
+                        <span class="dashboard-box__item-num">{{ $info['secrets'] }}</span>
                     </div>               
-                    <div class="dashboard-box__item">
+                    {{-- <div class="dashboard-box__item">
                         <span class="dashboard-box__item-text">{{ __('all total:') }}</span>
-                        {{-- <span class="dashboard-box__item-num">{{ $info['secrets']['all_total'] }}</span> --}}
-                    </div>               
+                        <span class="dashboard-box__item-num">{{ $info['secrets']['all_total'] }}</span>
+                    </div>                --}}
                 </div>
             </div>
 

@@ -22,9 +22,9 @@
     <meta name="theme-color" content="#fff">
     <meta name="application-name" content="{{ __('seo.' . $page . '.title') }}">
 
-    <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
-    <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-icon-180x180.png') }}">
+    <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') . '?v=' . rand(10, 1000) }}">
+    <link rel="icon" type="image/png" href="{{ asset('favicon.png') . '?v=' . rand(10, 1000) }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-icon-180x180.png') . '?v=' . rand(10, 1000) }}">
 
  
 

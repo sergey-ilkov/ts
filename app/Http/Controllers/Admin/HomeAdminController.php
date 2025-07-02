@@ -44,15 +44,14 @@ class HomeAdminController extends Controller
         // DB::select("SET information_schema_stats_expiry = 0");
         // $secrets_db = DB::select("SHOW TABLE STATUS LIKE 'secrets'");
         // dump($secrets_db);
+        // $secrets = Secret::all();
+        // $info['secrets'] = [
+        //     'current_total' => $secrets->count(),
+        //     'all_total' => $secrets_db[0]->Auto_increment - 1,
+        // ];
 
-        $secrets = Secret::all();
-
-        $info['secrets'] = [
-            'current_total' => $secrets->count(),
-            // 'all_total' => $secrets_db[0]->Auto_increment - 1,
-        ];
-
-
+        $secrets = Secret::count();
+        $info['secrets'] = $secrets;
 
         return view('admin.home.index', compact('info'));
     }

@@ -23,6 +23,9 @@
 <link rel="icon" type="image/png" href="{{ asset('favicon.png') . '?v=' . rand(10, 1000) }}">
 <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-icon-180x180.png') . '?v=' . rand(10, 1000) }}">
 
+
+<link rel="canonical" href="{{ route($page) }}">
+
 {{-- <link rel="manifest" href="{{ asset('manifest.json') }}"> --}}
 
 {{-- <script type="application/ld+json">
